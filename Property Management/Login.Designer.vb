@@ -34,6 +34,7 @@ Partial Class Login
         Me.PasswordTextBox = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.IconButton1 = New FontAwesome.Sharp.IconButton()
+        Me.BackIconButton = New FontAwesome.Sharp.IconButton()
         CType(Me.FileSystemWatcher1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -139,7 +140,7 @@ Partial Class Login
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1546, 150)
+        Me.Panel1.Size = New System.Drawing.Size(1600, 150)
         Me.Panel1.TabIndex = 1
         '
         'IconButton1
@@ -157,14 +158,30 @@ Partial Class Login
         Me.IconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.IconButton1.UseVisualStyleBackColor = True
         '
-        'Form3
+        'BackIconButton
+        '
+        Me.BackIconButton.Font = New System.Drawing.Font("Arial", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.BackIconButton.IconChar = FontAwesome.Sharp.IconChar.ArrowCircleLeft
+        Me.BackIconButton.IconColor = System.Drawing.Color.Black
+        Me.BackIconButton.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.BackIconButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BackIconButton.Location = New System.Drawing.Point(129, 692)
+        Me.BackIconButton.Name = "BackIconButton"
+        Me.BackIconButton.Size = New System.Drawing.Size(132, 53)
+        Me.BackIconButton.TabIndex = 17
+        Me.BackIconButton.Text = "Back"
+        Me.BackIconButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BackIconButton.UseVisualStyleBackColor = True
+        '
+        'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1546, 679)
+        Me.ClientSize = New System.Drawing.Size(1600, 757)
+        Me.Controls.Add(Me.BackIconButton)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Name = "Form3"
+        Me.Name = "Login"
         Me.Text = "Login"
         CType(Me.FileSystemWatcher1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
@@ -186,4 +203,5 @@ Partial Class Login
     Friend WithEvents ShowPasswordCheckBox As CheckBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
+    Friend WithEvents BackIconButton As FontAwesome.Sharp.IconButton
 End Class

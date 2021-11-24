@@ -22,6 +22,7 @@ Partial Class CreateAccount
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.FirstNameTextBox = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ConfirmPasswordTextBox = New System.Windows.Forms.TextBox()
@@ -34,6 +35,7 @@ Partial Class CreateAccount
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.PasswordMatchLabel = New System.Windows.Forms.Label()
         Me.ShowPasswordCheckBox = New System.Windows.Forms.CheckBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.FemaleRadioButton = New System.Windows.Forms.RadioButton()
@@ -42,6 +44,8 @@ Partial Class CreateAccount
         Me.CreatePasswordTextBox = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.IconButton1 = New FontAwesome.Sharp.IconButton()
+        Me.BackIconButton = New FontAwesome.Sharp.IconButton()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -65,7 +69,7 @@ Partial Class CreateAccount
         '
         'ConfirmPasswordTextBox
         '
-        Me.ConfirmPasswordTextBox.Location = New System.Drawing.Point(456, 141)
+        Me.ConfirmPasswordTextBox.Location = New System.Drawing.Point(434, 141)
         Me.ConfirmPasswordTextBox.Name = "ConfirmPasswordTextBox"
         Me.ConfirmPasswordTextBox.Size = New System.Drawing.Size(241, 31)
         Me.ConfirmPasswordTextBox.TabIndex = 3
@@ -113,7 +117,7 @@ Partial Class CreateAccount
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(456, 90)
+        Me.Label4.Location = New System.Drawing.Point(434, 90)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(142, 25)
         Me.Label4.TabIndex = 9
@@ -131,7 +135,7 @@ Partial Class CreateAccount
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(456, 197)
+        Me.Label6.Location = New System.Drawing.Point(434, 200)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(164, 25)
         Me.Label6.TabIndex = 11
@@ -139,6 +143,7 @@ Partial Class CreateAccount
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.PasswordMatchLabel)
         Me.GroupBox1.Controls.Add(Me.ShowPasswordCheckBox)
         Me.GroupBox1.Controls.Add(Me.GroupBox2)
         Me.GroupBox1.Controls.Add(Me.SignUpButton)
@@ -160,10 +165,19 @@ Partial Class CreateAccount
         Me.GroupBox1.TabIndex = 12
         Me.GroupBox1.TabStop = False
         '
+        'PasswordMatchLabel
+        '
+        Me.PasswordMatchLabel.AutoSize = True
+        Me.PasswordMatchLabel.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.PasswordMatchLabel.Location = New System.Drawing.Point(437, 246)
+        Me.PasswordMatchLabel.Name = "PasswordMatchLabel"
+        Me.PasswordMatchLabel.Size = New System.Drawing.Size(0, 22)
+        Me.PasswordMatchLabel.TabIndex = 16
+        '
         'ShowPasswordCheckBox
         '
         Me.ShowPasswordCheckBox.AutoSize = True
-        Me.ShowPasswordCheckBox.Location = New System.Drawing.Point(459, 242)
+        Me.ShowPasswordCheckBox.Location = New System.Drawing.Point(616, 196)
         Me.ShowPasswordCheckBox.Name = "ShowPasswordCheckBox"
         Me.ShowPasswordCheckBox.Size = New System.Drawing.Size(162, 29)
         Me.ShowPasswordCheckBox.TabIndex = 15
@@ -174,7 +188,7 @@ Partial Class CreateAccount
         '
         Me.GroupBox2.Controls.Add(Me.FemaleRadioButton)
         Me.GroupBox2.Controls.Add(Me.MaleRadioButton)
-        Me.GroupBox2.Location = New System.Drawing.Point(459, 289)
+        Me.GroupBox2.Location = New System.Drawing.Point(437, 289)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(238, 119)
         Me.GroupBox2.TabIndex = 14
@@ -204,7 +218,7 @@ Partial Class CreateAccount
         '
         'SignUpButton
         '
-        Me.SignUpButton.Location = New System.Drawing.Point(328, 437)
+        Me.SignUpButton.Location = New System.Drawing.Point(327, 446)
         Me.SignUpButton.Name = "SignUpButton"
         Me.SignUpButton.Size = New System.Drawing.Size(112, 34)
         Me.SignUpButton.TabIndex = 13
@@ -213,7 +227,7 @@ Partial Class CreateAccount
         '
         'CreatePasswordTextBox
         '
-        Me.CreatePasswordTextBox.Location = New System.Drawing.Point(456, 36)
+        Me.CreatePasswordTextBox.Location = New System.Drawing.Point(434, 36)
         Me.CreatePasswordTextBox.Name = "CreatePasswordTextBox"
         Me.CreatePasswordTextBox.Size = New System.Drawing.Size(241, 31)
         Me.CreatePasswordTextBox.TabIndex = 2
@@ -226,7 +240,7 @@ Partial Class CreateAccount
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1527, 150)
+        Me.Panel1.Size = New System.Drawing.Size(1564, 150)
         Me.Panel1.TabIndex = 13
         '
         'IconButton1
@@ -244,14 +258,30 @@ Partial Class CreateAccount
         Me.IconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.IconButton1.UseVisualStyleBackColor = True
         '
-        'Form4
+        'BackIconButton
+        '
+        Me.BackIconButton.Font = New System.Drawing.Font("Arial", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.BackIconButton.IconChar = FontAwesome.Sharp.IconChar.ArrowCircleLeft
+        Me.BackIconButton.IconColor = System.Drawing.Color.Black
+        Me.BackIconButton.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.BackIconButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BackIconButton.Location = New System.Drawing.Point(62, 725)
+        Me.BackIconButton.Name = "BackIconButton"
+        Me.BackIconButton.Size = New System.Drawing.Size(132, 53)
+        Me.BackIconButton.TabIndex = 17
+        Me.BackIconButton.Text = "Back"
+        Me.BackIconButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BackIconButton.UseVisualStyleBackColor = True
+        '
+        'CreateAccount
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1527, 753)
+        Me.ClientSize = New System.Drawing.Size(1564, 809)
+        Me.Controls.Add(Me.BackIconButton)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Name = "Form4"
+        Me.Name = "CreateAccount"
         Me.Text = "Create Account"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
@@ -282,4 +312,7 @@ Partial Class CreateAccount
     Friend WithEvents ShowPasswordCheckBox As CheckBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
+    Friend WithEvents PasswordMatchLabel As Label
+    Friend WithEvents BackIconButton As FontAwesome.Sharp.IconButton
+    Friend WithEvents ToolTip1 As ToolTip
 End Class

@@ -39,21 +39,14 @@ Public Class Login
         }
 
         If (MyUser.IsEqual(resUser, CurUser)) Then
-            'Dim form5 As Form5
+
             HomePage.Fname = resUser.FirstName
             HomePage.Show()
-
-
-            'Me.Hide()
-            'form5.ShowDialog()
-            'Me.Close()
             MessageBox.Show("Logged in Successfully")
-
-
         Else
             MyUser.ShowError()
         End If
-
+        Me.Close()
     End Sub
 
     Private Sub ForgotPasswordLinkLabel_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles ForgotPasswordLinkLabel.LinkClicked
@@ -62,10 +55,14 @@ Public Class Login
 
     Private Sub ShowPasswordCheckBox_CheckedChanged(sender As Object, e As EventArgs) Handles ShowPasswordCheckBox.CheckedChanged
         If ShowPasswordCheckBox.Checked = True Then
-            PasswordTextBox.UseSystemPasswordChar = True
-        Else
             PasswordTextBox.UseSystemPasswordChar = False
+        Else
+            PasswordTextBox.UseSystemPasswordChar = True
 
         End If
+    End Sub
+
+    Private Sub BackIconButton_Click(sender As Object, e As EventArgs) Handles BackIconButton.Click
+        Me.Close()
     End Sub
 End Class

@@ -10,28 +10,28 @@
             AreaComboBox.Items.Add(area(stepper))
         Next
 
-        If AreaComboBox.SelectedIndex = 0 Then
-            BuildingNameComboBox.MaxDropDownItems = area.Length
-            For interval = 0 To (gatea.Length - 1)
-                BuildingNameComboBox.Items.Add(gatea(interval))
-            Next
 
-        ElseIf AreaComboBox.SelectedIndex = 1 Then
-            BuildingNameComboBox.MaxDropDownItems = area.Length
-            For i = 0 To (gateb.Length - 1)
-                BuildingNameComboBox.Items.Add(gateb(i))
-            Next
-
-        ElseIf AreaComboBox.SelectedIndex = 2 Then
-            BuildingNameComboBox.MaxDropDownItems = area.Length
-            For stp = 0 To (gatec.Length - 1)
-                BuildingNameComboBox.Items.Add(gatec(stp))
-            Next
-        End If
     End Sub
     Private Sub AreaComboBox_SelectedIndexChanged_1(sender As Object, e As EventArgs)
+        BuildingNameComboBox.MaxDropDownItems = area.Length
+        For interval = 0 To (gatea.Length - 1)
+            BuildingNameComboBox.Items.Add(gatea(interval))
+        Next
+    End Sub
+    Private Sub AreaComboBox_SelectedIndexChanged_2(sender As Object, e As EventArgs)
+        BuildingNameComboBox.MaxDropDownItems = area.Length
+        For i = 0 To (gateb.Length - 1)
+            BuildingNameComboBox.Items.Add(gateb(i))
+        Next
 
     End Sub
+    Private Sub AreaComboBox_SelectedIndexChanged_3(sender As Object, e As EventArgs)
+        BuildingNameComboBox.MaxDropDownItems = area.Length
+        For stp = 0 To (gatec.Length - 1)
+            BuildingNameComboBox.Items.Add(gatec(stp))
+        Next
+    End Sub
+
 
     Private Sub BuildingNameComboBox_SelectedIndexChanged(sender As Object, e As EventArgs)
 

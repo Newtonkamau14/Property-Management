@@ -22,7 +22,10 @@ Partial Class CreateNewPassword
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.CreateNewPasswordLabel = New System.Windows.Forms.Label()
+        Me.ShowPasswordCheckBox = New System.Windows.Forms.CheckBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.ForgotConfirmPasswordTextBox = New System.Windows.Forms.TextBox()
         Me.ContinueButton = New System.Windows.Forms.Button()
@@ -32,6 +35,7 @@ Partial Class CreateNewPassword
         Me.ForgotNewPasswordTextBox = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.IconButton1 = New FontAwesome.Sharp.IconButton()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.GroupBox1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -41,6 +45,8 @@ Partial Class CreateNewPassword
         Me.GroupBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox1.Controls.Add(Me.CreateNewPasswordLabel)
+        Me.GroupBox1.Controls.Add(Me.ShowPasswordCheckBox)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.ForgotConfirmPasswordTextBox)
         Me.GroupBox1.Controls.Add(Me.ContinueButton)
@@ -50,9 +56,28 @@ Partial Class CreateNewPassword
         Me.GroupBox1.Controls.Add(Me.ForgotNewPasswordTextBox)
         Me.GroupBox1.Location = New System.Drawing.Point(434, 202)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(596, 486)
+        Me.GroupBox1.Size = New System.Drawing.Size(623, 515)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
+        '
+        'CreateNewPasswordLabel
+        '
+        Me.CreateNewPasswordLabel.AutoSize = True
+        Me.CreateNewPasswordLabel.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.CreateNewPasswordLabel.Location = New System.Drawing.Point(55, 426)
+        Me.CreateNewPasswordLabel.Name = "CreateNewPasswordLabel"
+        Me.CreateNewPasswordLabel.Size = New System.Drawing.Size(0, 22)
+        Me.CreateNewPasswordLabel.TabIndex = 10
+        '
+        'ShowPasswordCheckBox
+        '
+        Me.ShowPasswordCheckBox.AutoSize = True
+        Me.ShowPasswordCheckBox.Location = New System.Drawing.Point(319, 377)
+        Me.ShowPasswordCheckBox.Name = "ShowPasswordCheckBox"
+        Me.ShowPasswordCheckBox.Size = New System.Drawing.Size(162, 29)
+        Me.ShowPasswordCheckBox.TabIndex = 9
+        Me.ShowPasswordCheckBox.Text = "Show Password"
+        Me.ShowPasswordCheckBox.UseVisualStyleBackColor = True
         '
         'Label3
         '
@@ -69,10 +94,11 @@ Partial Class CreateNewPassword
         Me.ForgotConfirmPasswordTextBox.Name = "ForgotConfirmPasswordTextBox"
         Me.ForgotConfirmPasswordTextBox.Size = New System.Drawing.Size(282, 31)
         Me.ForgotConfirmPasswordTextBox.TabIndex = 6
+        Me.ForgotConfirmPasswordTextBox.UseSystemPasswordChar = True
         '
         'ContinueButton
         '
-        Me.ContinueButton.Location = New System.Drawing.Point(399, 409)
+        Me.ContinueButton.Location = New System.Drawing.Point(456, 456)
         Me.ContinueButton.Name = "ContinueButton"
         Me.ContinueButton.Size = New System.Drawing.Size(112, 34)
         Me.ContinueButton.TabIndex = 5
@@ -82,7 +108,7 @@ Partial Class CreateNewPassword
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(55, 253)
+        Me.Label2.Location = New System.Drawing.Point(55, 252)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(127, 25)
         Me.Label2.TabIndex = 4
@@ -110,6 +136,7 @@ Partial Class CreateNewPassword
         Me.ForgotNewPasswordTextBox.Name = "ForgotNewPasswordTextBox"
         Me.ForgotNewPasswordTextBox.Size = New System.Drawing.Size(282, 31)
         Me.ForgotNewPasswordTextBox.TabIndex = 1
+        Me.ForgotNewPasswordTextBox.UseSystemPasswordChar = True
         '
         'Panel1
         '
@@ -118,7 +145,7 @@ Partial Class CreateNewPassword
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1514, 150)
+        Me.Panel1.Size = New System.Drawing.Size(1541, 150)
         Me.Panel1.TabIndex = 2
         '
         'IconButton1
@@ -136,14 +163,14 @@ Partial Class CreateNewPassword
         Me.IconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.IconButton1.UseVisualStyleBackColor = True
         '
-        'Form6
+        'CreateNewPassword
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1514, 733)
+        Me.ClientSize = New System.Drawing.Size(1541, 762)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Name = "Form6"
+        Me.Name = "CreateNewPassword"
         Me.Text = "Create New Password"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
@@ -162,4 +189,7 @@ Partial Class CreateNewPassword
     Friend WithEvents ForgotNewPasswordTextBox As TextBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
+    Friend WithEvents ShowPasswordCheckBox As CheckBox
+    Friend WithEvents CreateNewPasswordLabel As Label
+    Friend WithEvents ToolTip1 As ToolTip
 End Class
