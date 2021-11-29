@@ -7,7 +7,7 @@
     End Sub
 
     Private Sub ChoosePropertyIconButton_Click(sender As Object, e As EventArgs) Handles ChoosePropertyIconButton.Click
-        ChooseProperty.Show()
+        Form1.Show()
     End Sub
 
 
