@@ -26,6 +26,7 @@
     <PackageReference Include="FontAwesome.Sharp" Version="5.15.3" />
     <PackageReference Include="FontAwesome.WPF" Version="4.7.0.9" />
     <PackageReference Include="MySql.Data" Version="8.0.27" />
+    <PackageReference Include="MySqlConnector" Version="2.1.0" />
   </ItemGroup>
 
   <ItemGroup>

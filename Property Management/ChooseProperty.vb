@@ -1,14 +1,26 @@
-﻿Public Class ChooseProperty
-    Dim area = New String() {"Gate A", "Gate B", "Gate C"}
-    Dim gatea = New String() {"UAP Tower", "GTC Tower", "Prism Tower", "Britam Tower"}
-    Dim gateb = New String() {"Chrysler Building", " Vanderbilt", "Park Avenue"}
-    Dim gatec = New String() {"HSBC", "Heron", "Citigroup"}
+﻿Imports MySql.Data.MySqlClient
+Imports System.Data.SqlClient
+
+
+Public Class ChooseProperty
+    Dim con As New MySqlConnection("server=localhost; user=root; password=; database=property_management;")
+
+    'Dim area = New String() {"Gate A", "Gate B", "Gate C"}
+    'Dim gatea = New String() {"UAP Tower", "GTC Tower", "Prism Tower", "Britam Tower"}
+    'Dim gateb = New String() {"Chrysler Building", " Vanderbilt", "Park Avenue"}
+    'Dim gatec = New String() {"HSBC", "Heron", "Citigroup"}
     Private Sub ChooseProperty_Load(sender As Object, e As EventArgs) Handles Me.Load
         Me.WindowState = FormWindowState.Maximized
-        AreaComboBox.MaxDropDownItems = area.Length
-        For stepper = 0 To (area.Length - 1)
-            AreaComboBox.Items.Add(area(stepper))
-        Next
+        con.Open()
+        If con.State = ConnectionState.Open Then
+            MsgBox("Database connected!")
+        Else
+            MsgBox("Error connecting to database.")
+        End If
+
+
+
+
 
 
     End Sub
