@@ -8,22 +8,9 @@ Public Class ChooseProperty
 
     Private Sub ChooseProperty_Load(sender As Object, e As EventArgs) Handles Me.Load
         Me.WindowState = FormWindowState.Maximized
-        'con.Open()
-        'If con.State = ConnectionState.Open Then
-        'MsgBox("Database connected!")
-        'Else
-        'MsgBox("Error connecting to database.")
-        'End If
-
-
-
-
-
 
 
     End Sub
-
-
 
 
     Private Sub BuildingNameComboBox_SelectedIndexChanged(sender As Object, e As EventArgs)
@@ -35,20 +22,10 @@ Public Class ChooseProperty
         Me.Close()
     End Sub
 
-    Private Sub IconButton1_Click(sender As Object, e As EventArgs)
-        ' MessageBox.Show()
-    End Sub
-
-    Private Sub nextIconButton_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub IconButton2_Click(sender As Object, e As EventArgs) Handles BookButton.Click
-
-    End Sub
 
     Private Sub CheckButton_Click(sender As Object, e As EventArgs) Handles CheckButton.Click
         Dim area As String
+
 
         Dim sqlquery As String
         Dim myCmd As MySqlCommand
@@ -56,62 +33,190 @@ Public Class ChooseProperty
 
         area = AreaComboBox.Text
 
-        'If statement to determine sql query
+        'Case statement to determine sql query
         If area = "Gate A" And StudioRadioButton.Checked = True Then
             sqlquery = "Select * from forsale where area = 'gate A' and type = 'Studio'"
+            con.Open()
+
+            myCmd = New MySqlCommand(sqlquery, con)
+            Dim myReader As MySqlDataReader
+            myReader = myCmd.ExecuteReader()
+
+
+
+            While (myReader.Read())
+                'Add the items from db one by one into the list box.
+                AvailableListBox.Items.Add(myReader.GetString(1))
+            End While
+
+            'Close the reader and the connection.
+            myReader.Close()
+            con.Close()
         ElseIf area = "Gate B" And StudioRadioButton.Checked = True Then
             sqlquery = "Select * from forsale where area = 'gate B' and type = 'Studio'"
+            con.Open()
+
+            myCmd = New MySqlCommand(sqlquery, con)
+            Dim myReader As MySqlDataReader
+            myReader = myCmd.ExecuteReader()
+
+
+
+            While (myReader.Read())
+                'Add the items from db one by one into the list box.
+                AvailableListBox.Items.Add(myReader.GetString(1))
+            End While
+
+            'Close the reader and the connection.
+            myReader.Close()
+            con.Close()
         ElseIf area = "Gate c" And StudioRadioButton.Checked = True Then
             sqlquery = "Select * from forsale where area = 'gate C' and type = 'Studio'"
+            con.Open()
+
+            myCmd = New MySqlCommand(sqlquery, con)
+            Dim myReader As MySqlDataReader
+            myReader = myCmd.ExecuteReader()
+
+
+
+            While (myReader.Read())
+                'Add the items from db one by one into the list box.
+                AvailableListBox.Items.Add(myReader.GetString(1))
+            End While
+
+            'Close the reader and the connection.
+            myReader.Close()
+            con.Close()
         ElseIf area = "Gate A" And OneBedroomRadioButton.Checked = True Then
             sqlquery = "Select * from forsale where area = 'Gate A' and type = 'One Bedroom'"
+            con.Open()
+
+            myCmd = New MySqlCommand(sqlquery, con)
+            Dim myReader As MySqlDataReader
+            myReader = myCmd.ExecuteReader()
+
+
+
+            While (myReader.Read())
+                'Add the items from db one by one into the list box.
+                AvailableListBox.Items.Add(myReader.GetString(1))
+            End While
+
+            'Close the reader and the connection.
+            myReader.Close()
+            con.Close()
         ElseIf area = "Gate B" And OneBedroomRadioButton.Checked = True Then
             sqlquery = "Select * from forsale where area = 'gate B' and type = 'One Bedroom'"
+            con.Open()
+
+            myCmd = New MySqlCommand(sqlquery, con)
+            Dim myReader As MySqlDataReader
+            myReader = myCmd.ExecuteReader()
+
+
+
+            While (myReader.Read())
+                'Add the items from db one by one into the list box.
+                AvailableListBox.Items.Add(myReader.GetString(1))
+            End While
+
+            'Close the reader and the connection.
+            myReader.Close()
+            con.Close()
         ElseIf area = "Gate C" And OneBedroomRadioButton.Checked = True Then
             sqlquery = "Select * from forsale where area = 'gate C' and type = 'One Bedroom'"
+            con.Open()
+
+            myCmd = New MySqlCommand(sqlquery, con)
+            Dim myReader As MySqlDataReader
+            myReader = myCmd.ExecuteReader()
+
+
+
+            While (myReader.Read())
+                'Add the items from db one by one into the list box.
+                AvailableListBox.Items.Add(myReader.GetString(1))
+            End While
+
+            'Close the reader and the connection.
+            myReader.Close()
+            con.Close()
         ElseIf area = "Gate A" And TwoBedroomRadioButton.Checked = True Then
             sqlquery = "Select * from forsale where area = 'gate A' and type = 'Two Bedroom'"
+            con.Open()
+
+            myCmd = New MySqlCommand(sqlquery, con)
+            Dim myReader As MySqlDataReader
+            myReader = myCmd.ExecuteReader()
+
+
+
+            While (myReader.Read())
+                'Add the items from db one by one into the list box.
+                AvailableListBox.Items.Add(myReader.GetString(1))
+            End While
+
+            'Close the reader and the connection.
+            myReader.Close()
+            con.Close()
         ElseIf area = "Gate B" And TwoBedroomRadioButton.Checked = True Then
             sqlquery = "Select * from forsale where area = 'gate B' and type = 'Two Bedroom'"
+            con.Open()
+
+            myCmd = New MySqlCommand(sqlquery, con)
+            Dim myReader As MySqlDataReader
+            myReader = myCmd.ExecuteReader()
+
+
+
+            While (myReader.Read())
+                'Add the items from db one by one into the list box.
+                AvailableListBox.Items.Add(myReader.GetString(1))
+            End While
+
+            'Close the reader and the connection.
+            myReader.Close()
+            con.Close()
         ElseIf area = "Gate C" And TwoBedroomRadioButton.Checked = True Then
             sqlquery = "Select * from forsale where area = 'gate C' and type = 'Two Bedroom'"
+            con.Open()
+
+            myCmd = New MySqlCommand(sqlquery, con)
+            Dim myReader As MySqlDataReader
+            myReader = myCmd.ExecuteReader()
+
+
+
+            While (myReader.Read())
+                'Add the items from db one by one into the list box.
+                AvailableListBox.Items.Add(myReader.GetString(1))
+            End While
+
+            'Close the reader and the connection.
+            myReader.Close()
+            con.Close()
+        ElseIf area = "Gate A" And StudioRadioButton.Checked = False Then
+            sqlquery = "Select * from forsale where area = 'gate A' and type = 'Two Bedroom'"
+            con.Open()
+
+            myCmd = New MySqlCommand(sqlquery, con)
+            Dim myReader As MySqlDataReader
+            myReader = myCmd.ExecuteReader()
+
+
+
+            While (myReader.Read())
+                'Add the items from db one by one into the list box.
+                AvailableListBox.Items.Add(myReader.GetString(1))
+            End While
+
+            'Close the reader and the connection.
+            myReader.Close()
+            con.Close()
+        Else
+            MessageBox.Show("Please select both an area and a type of property.")
         End If
-        con.Open()
-
-        myCmd = New MySqlCommand(sqlquery, con)
-        Dim myReader As MySqlDataReader
-        myReader = myCmd.ExecuteReader()
-
-
-
-        While (myReader.Read())
-            'Add the items from db one by one into the list box.
-            AvailableListBox.Items.Add(myReader.GetString(1))
-        End While
-
-        'Close the reader and the connection.
-        myReader.Close()
-        con.Close()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     End Sub
@@ -121,8 +226,8 @@ Public Class ChooseProperty
     End Sub
 
     Private Sub ShowButton_Click(sender As Object, e As EventArgs) Handles ShowButton.Click
-        Dim selectedprop As String
-        selectedprop = AvailableListBox.SelectedIndex.ToString
-        MessageBox.Show(selectedprop)
+        BookingForm.Show()
+
+
     End Sub
 End Class

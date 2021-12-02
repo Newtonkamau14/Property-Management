@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class CreateNewPassword
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class CreateNewPassword
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -33,11 +33,13 @@ Partial Class CreateNewPassword
         Me.Label1 = New System.Windows.Forms.Label()
         Me.EmailAddressTextBox = New System.Windows.Forms.TextBox()
         Me.ForgotNewPasswordTextBox = New System.Windows.Forms.TextBox()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.IconPictureBox1 = New FontAwesome.Sharp.IconPictureBox()
         Me.GroupBox1.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -54,6 +56,7 @@ Partial Class CreateNewPassword
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.EmailAddressTextBox)
         Me.GroupBox1.Controls.Add(Me.ForgotNewPasswordTextBox)
+        Me.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.GroupBox1.Location = New System.Drawing.Point(434, 202)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(623, 515)
@@ -72,9 +75,10 @@ Partial Class CreateNewPassword
         'ShowPasswordCheckBox
         '
         Me.ShowPasswordCheckBox.AutoSize = True
+        Me.ShowPasswordCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ShowPasswordCheckBox.Location = New System.Drawing.Point(319, 377)
         Me.ShowPasswordCheckBox.Name = "ShowPasswordCheckBox"
-        Me.ShowPasswordCheckBox.Size = New System.Drawing.Size(162, 29)
+        Me.ShowPasswordCheckBox.Size = New System.Drawing.Size(157, 29)
         Me.ShowPasswordCheckBox.TabIndex = 9
         Me.ShowPasswordCheckBox.Text = "Show Password"
         Me.ShowPasswordCheckBox.UseVisualStyleBackColor = True
@@ -98,6 +102,7 @@ Partial Class CreateNewPassword
         '
         'ContinueButton
         '
+        Me.ContinueButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ContinueButton.Location = New System.Drawing.Point(456, 456)
         Me.ContinueButton.Name = "ContinueButton"
         Me.ContinueButton.Size = New System.Drawing.Size(112, 34)
@@ -141,27 +146,37 @@ Partial Class CreateNewPassword
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Gainsboro
-        Me.Panel1.Controls.Add(Me.IconButton1)
+        Me.Panel1.Controls.Add(Me.Label4)
+        Me.Panel1.Controls.Add(Me.IconPictureBox1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1541, 150)
         Me.Panel1.TabIndex = 2
         '
-        'IconButton1
+        'Label4
         '
-        Me.IconButton1.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.Home
-        Me.IconButton1.IconColor = System.Drawing.Color.Black
-        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton1.Location = New System.Drawing.Point(12, 36)
-        Me.IconButton1.Name = "IconButton1"
-        Me.IconButton1.Size = New System.Drawing.Size(303, 65)
-        Me.IconButton1.TabIndex = 0
-        Me.IconButton1.Text = "LOREM PROPERTY MANAGEMENT"
-        Me.IconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.IconButton1.UseVisualStyleBackColor = True
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Arial", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label4.Location = New System.Drawing.Point(205, 51)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(481, 32)
+        Me.Label4.TabIndex = 2
+        Me.Label4.Text = "LOREM PROPERTY MANAGEMENT"
+        '
+        'IconPictureBox1
+        '
+        Me.IconPictureBox1.BackColor = System.Drawing.Color.Gainsboro
+        Me.IconPictureBox1.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.IconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Home
+        Me.IconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText
+        Me.IconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconPictureBox1.IconSize = 66
+        Me.IconPictureBox1.Location = New System.Drawing.Point(129, 38)
+        Me.IconPictureBox1.Name = "IconPictureBox1"
+        Me.IconPictureBox1.Size = New System.Drawing.Size(70, 66)
+        Me.IconPictureBox1.TabIndex = 1
+        Me.IconPictureBox1.TabStop = False
         '
         'CreateNewPassword
         '
@@ -175,6 +190,8 @@ Partial Class CreateNewPassword
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -187,9 +204,10 @@ Partial Class CreateNewPassword
     Friend WithEvents Label1 As Label
     Friend WithEvents EmailAddressTextBox As TextBox
     Friend WithEvents ForgotNewPasswordTextBox As TextBox
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
     Friend WithEvents ShowPasswordCheckBox As CheckBox
     Friend WithEvents CreateNewPasswordLabel As Label
     Friend WithEvents ToolTip1 As ToolTip
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Label4 As Label
+    Friend WithEvents IconPictureBox1 As FontAwesome.Sharp.IconPictureBox
 End Class

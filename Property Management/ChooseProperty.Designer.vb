@@ -32,57 +32,49 @@ Partial Class ChooseProperty
         Me.OneBedroomRadioButton = New System.Windows.Forms.RadioButton()
         Me.StudioRadioButton = New System.Windows.Forms.RadioButton()
         Me.CheckButton = New FontAwesome.Sharp.IconButton()
-        Me.BookButton = New FontAwesome.Sharp.IconButton()
         Me.AvailableListBox = New System.Windows.Forms.ListBox()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.ShowButton = New FontAwesome.Sharp.IconButton()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.IconPictureBox1 = New FontAwesome.Sharp.IconPictureBox()
         Me.TypeOfApartmentGroupBox.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
+        Me.Panel1.SuspendLayout()
+        CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'AreaComboBox
         '
         Me.AreaComboBox.FormattingEnabled = True
         Me.AreaComboBox.Items.AddRange(New Object() {"Gate A", "Gate B", "Gate C"})
-        Me.AreaComboBox.Location = New System.Drawing.Point(57, 21)
-        Me.AreaComboBox.Margin = New System.Windows.Forms.Padding(2)
+        Me.AreaComboBox.Location = New System.Drawing.Point(81, 35)
         Me.AreaComboBox.Name = "AreaComboBox"
-        Me.AreaComboBox.Size = New System.Drawing.Size(129, 23)
+        Me.AreaComboBox.Size = New System.Drawing.Size(183, 33)
         Me.AreaComboBox.TabIndex = 0
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(5, 24)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Location = New System.Drawing.Point(7, 40)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(54, 15)
+        Me.Label1.Size = New System.Drawing.Size(78, 21)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Location"
         '
         'BackIconButton
         '
+        Me.BackIconButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BackIconButton.Font = New System.Drawing.Font("Arial", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.BackIconButton.IconChar = FontAwesome.Sharp.IconChar.ArrowCircleLeft
         Me.BackIconButton.IconColor = System.Drawing.Color.Black
         Me.BackIconButton.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.BackIconButton.IconSize = 30
         Me.BackIconButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BackIconButton.Location = New System.Drawing.Point(30, 11)
-        Me.BackIconButton.Margin = New System.Windows.Forms.Padding(2)
+        Me.BackIconButton.Location = New System.Drawing.Point(43, 775)
         Me.BackIconButton.Name = "BackIconButton"
-        Me.BackIconButton.Size = New System.Drawing.Size(91, 31)
+        Me.BackIconButton.Size = New System.Drawing.Size(130, 52)
         Me.BackIconButton.TabIndex = 16
         Me.BackIconButton.Text = "Back"
         Me.BackIconButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -95,9 +87,12 @@ Partial Class ChooseProperty
         Me.TypeOfApartmentGroupBox.Controls.Add(Me.TwoBedroomRadioButton)
         Me.TypeOfApartmentGroupBox.Controls.Add(Me.OneBedroomRadioButton)
         Me.TypeOfApartmentGroupBox.Controls.Add(Me.StudioRadioButton)
-        Me.TypeOfApartmentGroupBox.Location = New System.Drawing.Point(6, 71)
+        Me.TypeOfApartmentGroupBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.TypeOfApartmentGroupBox.Location = New System.Drawing.Point(9, 118)
+        Me.TypeOfApartmentGroupBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TypeOfApartmentGroupBox.Name = "TypeOfApartmentGroupBox"
-        Me.TypeOfApartmentGroupBox.Size = New System.Drawing.Size(238, 167)
+        Me.TypeOfApartmentGroupBox.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TypeOfApartmentGroupBox.Size = New System.Drawing.Size(340, 278)
         Me.TypeOfApartmentGroupBox.TabIndex = 19
         Me.TypeOfApartmentGroupBox.TabStop = False
         Me.TypeOfApartmentGroupBox.Text = "Type of Apartment"
@@ -105,9 +100,10 @@ Partial Class ChooseProperty
         'PenthouseRadioButton
         '
         Me.PenthouseRadioButton.AutoSize = True
-        Me.PenthouseRadioButton.Location = New System.Drawing.Point(34, 129)
+        Me.PenthouseRadioButton.Location = New System.Drawing.Point(49, 215)
+        Me.PenthouseRadioButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PenthouseRadioButton.Name = "PenthouseRadioButton"
-        Me.PenthouseRadioButton.Size = New System.Drawing.Size(81, 19)
+        Me.PenthouseRadioButton.Size = New System.Drawing.Size(119, 29)
         Me.PenthouseRadioButton.TabIndex = 4
         Me.PenthouseRadioButton.TabStop = True
         Me.PenthouseRadioButton.Text = "Penthouse"
@@ -116,9 +112,10 @@ Partial Class ChooseProperty
         'LoftRadioButton
         '
         Me.LoftRadioButton.AutoSize = True
-        Me.LoftRadioButton.Location = New System.Drawing.Point(36, 104)
+        Me.LoftRadioButton.Location = New System.Drawing.Point(51, 173)
+        Me.LoftRadioButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.LoftRadioButton.Name = "LoftRadioButton"
-        Me.LoftRadioButton.Size = New System.Drawing.Size(46, 19)
+        Me.LoftRadioButton.Size = New System.Drawing.Size(68, 29)
         Me.LoftRadioButton.TabIndex = 3
         Me.LoftRadioButton.TabStop = True
         Me.LoftRadioButton.Text = "Loft"
@@ -127,9 +124,10 @@ Partial Class ChooseProperty
         'TwoBedroomRadioButton
         '
         Me.TwoBedroomRadioButton.AutoSize = True
-        Me.TwoBedroomRadioButton.Location = New System.Drawing.Point(34, 76)
+        Me.TwoBedroomRadioButton.Location = New System.Drawing.Point(49, 127)
+        Me.TwoBedroomRadioButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TwoBedroomRadioButton.Name = "TwoBedroomRadioButton"
-        Me.TwoBedroomRadioButton.Size = New System.Drawing.Size(98, 19)
+        Me.TwoBedroomRadioButton.Size = New System.Drawing.Size(148, 29)
         Me.TwoBedroomRadioButton.TabIndex = 2
         Me.TwoBedroomRadioButton.TabStop = True
         Me.TwoBedroomRadioButton.Text = "Two Bedroom"
@@ -138,9 +136,10 @@ Partial Class ChooseProperty
         'OneBedroomRadioButton
         '
         Me.OneBedroomRadioButton.AutoSize = True
-        Me.OneBedroomRadioButton.Location = New System.Drawing.Point(34, 51)
+        Me.OneBedroomRadioButton.Location = New System.Drawing.Point(49, 85)
+        Me.OneBedroomRadioButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.OneBedroomRadioButton.Name = "OneBedroomRadioButton"
-        Me.OneBedroomRadioButton.Size = New System.Drawing.Size(99, 19)
+        Me.OneBedroomRadioButton.Size = New System.Drawing.Size(149, 29)
         Me.OneBedroomRadioButton.TabIndex = 1
         Me.OneBedroomRadioButton.TabStop = True
         Me.OneBedroomRadioButton.Text = "One Bedroom"
@@ -149,9 +148,10 @@ Partial Class ChooseProperty
         'StudioRadioButton
         '
         Me.StudioRadioButton.AutoSize = True
-        Me.StudioRadioButton.Location = New System.Drawing.Point(34, 26)
+        Me.StudioRadioButton.Location = New System.Drawing.Point(49, 43)
+        Me.StudioRadioButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.StudioRadioButton.Name = "StudioRadioButton"
-        Me.StudioRadioButton.Size = New System.Drawing.Size(119, 19)
+        Me.StudioRadioButton.Size = New System.Drawing.Size(178, 29)
         Me.StudioRadioButton.TabIndex = 0
         Me.StudioRadioButton.TabStop = True
         Me.StudioRadioButton.Text = "Studio Apartment"
@@ -159,171 +159,117 @@ Partial Class ChooseProperty
         '
         'CheckButton
         '
+        Me.CheckButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.CheckButton.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.CheckButton.IconChar = FontAwesome.Sharp.IconChar.ArrowAltCircleUp
         Me.CheckButton.IconColor = System.Drawing.Color.Black
         Me.CheckButton.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.CheckButton.IconSize = 30
         Me.CheckButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.CheckButton.Location = New System.Drawing.Point(12, 341)
-        Me.CheckButton.Margin = New System.Windows.Forms.Padding(2)
+        Me.CheckButton.Location = New System.Drawing.Point(289, 677)
         Me.CheckButton.Name = "CheckButton"
-        Me.CheckButton.Size = New System.Drawing.Size(142, 31)
+        Me.CheckButton.Size = New System.Drawing.Size(203, 52)
         Me.CheckButton.TabIndex = 21
         Me.CheckButton.Text = "Check Availability"
         Me.CheckButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.CheckButton.UseVisualStyleBackColor = True
         '
-        'BookButton
-        '
-        Me.BookButton.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.BookButton.IconChar = FontAwesome.Sharp.IconChar.ArrowAltCircleUp
-        Me.BookButton.IconColor = System.Drawing.Color.Black
-        Me.BookButton.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.BookButton.IconSize = 30
-        Me.BookButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BookButton.Location = New System.Drawing.Point(723, 366)
-        Me.BookButton.Margin = New System.Windows.Forms.Padding(2)
-        Me.BookButton.Name = "BookButton"
-        Me.BookButton.Size = New System.Drawing.Size(191, 31)
-        Me.BookButton.TabIndex = 22
-        Me.BookButton.Text = "Book Property"
-        Me.BookButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.BookButton.UseVisualStyleBackColor = True
-        '
         'AvailableListBox
         '
         Me.AvailableListBox.FormattingEnabled = True
-        Me.AvailableListBox.ItemHeight = 15
-        Me.AvailableListBox.Location = New System.Drawing.Point(327, 71)
+        Me.AvailableListBox.ItemHeight = 25
+        Me.AvailableListBox.Location = New System.Drawing.Point(740, 209)
+        Me.AvailableListBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.AvailableListBox.Name = "AvailableListBox"
-        Me.AvailableListBox.Size = New System.Drawing.Size(240, 184)
+        Me.AvailableListBox.Size = New System.Drawing.Size(341, 304)
         Me.AvailableListBox.TabIndex = 25
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.TextBox3)
-        Me.GroupBox1.Controls.Add(Me.TextBox2)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
-        Me.GroupBox1.Controls.Add(Me.PictureBox1)
-        Me.GroupBox1.Location = New System.Drawing.Point(602, 36)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(312, 294)
-        Me.GroupBox1.TabIndex = 26
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "View Property"
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Location = New System.Drawing.Point(69, 21)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(152, 108)
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
         '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.AreaComboBox)
         Me.GroupBox2.Controls.Add(Me.Label1)
         Me.GroupBox2.Controls.Add(Me.TypeOfApartmentGroupBox)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 55)
+        Me.GroupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.GroupBox2.Location = New System.Drawing.Point(289, 193)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(293, 258)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.GroupBox2.Size = New System.Drawing.Size(419, 430)
         Me.GroupBox2.TabIndex = 27
         Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "GroupBox2"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(121, 136)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 23)
-        Me.TextBox1.TabIndex = 1
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(121, 175)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 23)
-        Me.TextBox2.TabIndex = 2
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(121, 215)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 23)
-        Me.TextBox3.TabIndex = 3
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(17, 140)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(39, 15)
-        Me.Label2.TabIndex = 4
-        Me.Label2.Text = "Name"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(17, 179)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(31, 15)
-        Me.Label3.TabIndex = 5
-        Me.Label3.Text = "Area"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(17, 223)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(33, 15)
-        Me.Label4.TabIndex = 6
-        Me.Label4.Text = "Price"
         '
         'ShowButton
         '
+        Me.ShowButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ShowButton.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.ShowButton.IconChar = FontAwesome.Sharp.IconChar.ArrowAltCircleUp
         Me.ShowButton.IconColor = System.Drawing.Color.Black
         Me.ShowButton.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.ShowButton.IconSize = 30
         Me.ShowButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ShowButton.Location = New System.Drawing.Point(348, 282)
-        Me.ShowButton.Margin = New System.Windows.Forms.Padding(2)
+        Me.ShowButton.Location = New System.Drawing.Point(818, 571)
         Me.ShowButton.Name = "ShowButton"
-        Me.ShowButton.Size = New System.Drawing.Size(134, 31)
+        Me.ShowButton.Size = New System.Drawing.Size(191, 52)
         Me.ShowButton.TabIndex = 28
         Me.ShowButton.Text = "Show Property"
         Me.ShowButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.ShowButton.UseVisualStyleBackColor = True
         '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.Gainsboro
+        Me.Panel1.Controls.Add(Me.Label4)
+        Me.Panel1.Controls.Add(Me.IconPictureBox1)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1484, 150)
+        Me.Panel1.TabIndex = 29
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Arial", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label4.Location = New System.Drawing.Point(205, 51)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(481, 32)
+        Me.Label4.TabIndex = 2
+        Me.Label4.Text = "LOREM PROPERTY MANAGEMENT"
+        '
+        'IconPictureBox1
+        '
+        Me.IconPictureBox1.BackColor = System.Drawing.Color.Gainsboro
+        Me.IconPictureBox1.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.IconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Home
+        Me.IconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText
+        Me.IconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconPictureBox1.IconSize = 66
+        Me.IconPictureBox1.Location = New System.Drawing.Point(129, 38)
+        Me.IconPictureBox1.Name = "IconPictureBox1"
+        Me.IconPictureBox1.Size = New System.Drawing.Size(70, 66)
+        Me.IconPictureBox1.TabIndex = 1
+        Me.IconPictureBox1.TabStop = False
+        '
         'ChooseProperty
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(959, 449)
+        Me.ClientSize = New System.Drawing.Size(1484, 869)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.ShowButton)
         Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.AvailableListBox)
-        Me.Controls.Add(Me.BookButton)
         Me.Controls.Add(Me.CheckButton)
         Me.Controls.Add(Me.BackIconButton)
-        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "ChooseProperty"
         Me.Text = "Choose Property"
         Me.TypeOfApartmentGroupBox.ResumeLayout(False)
         Me.TypeOfApartmentGroupBox.PerformLayout()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -338,16 +284,10 @@ Partial Class ChooseProperty
     Friend WithEvents OneBedroomRadioButton As RadioButton
     Friend WithEvents StudioRadioButton As RadioButton
     Friend WithEvents CheckButton As FontAwesome.Sharp.IconButton
-    Friend WithEvents BookButton As FontAwesome.Sharp.IconButton
     Friend WithEvents AvailableListBox As ListBox
-    Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents ShowButton As FontAwesome.Sharp.IconButton
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Label4 As Label
+    Friend WithEvents IconPictureBox1 As FontAwesome.Sharp.IconPictureBox
 End Class

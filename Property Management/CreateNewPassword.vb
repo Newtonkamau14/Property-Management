@@ -1,23 +1,11 @@
-﻿Imports FireSharp.Config
-Imports FireSharp.Response
-Imports FireSharp.Interfaces
+﻿Imports MySql.Data.MySqlClient
 Imports System.Text.RegularExpressions
 Imports System.ComponentModel
 
 Public Class CreateNewPassword
-    Private fcon As New FirebaseConfig() With
-    {
-    .AuthSecret = "re22bCVTGFZl7VQRE7251agFMYdxr2rPJywGAm6d",
-    .BasePath = "https://property-management-b7c8c-default-rtdb.firebaseio.com/"
-    }
-    Private client As IFirebaseClient
-
+    Dim createPasswordCon As New MySqlConnection("server=localhost; user=root; password=; database=property_management;")
     Private Sub CreateNewPassword_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Try
-            client = New FireSharp.FirebaseClient(fcon)
-        Catch ex As Exception
-            MessageBox.Show(ex.ToString())
-        End Try
+
         ToolTip1.SetToolTip(ForgotNewPasswordTextBox, "Password must have uppercase letter,8 characters long & special character")
     End Sub
     Private Sub ContinueButton_Click(sender As Object, e As EventArgs) Handles ContinueButton.Click
@@ -29,17 +17,24 @@ Public Class CreateNewPassword
         End If
 
 #End Region
+        Dim createQuery As String
+        Dim createCmd As MySqlCommand
+        createQuery = "UPDATE users SET password ='" + ForgotConfirmPasswordTextBox.Text + "'"
+        createPasswordCon.Open()
+        Dim createReader As MySqlDataReader
+        createCmd = New MySqlCommand(createQuery, createPasswordCon)
+        createReader = createCmd.ExecuteReader()
 
-        Dim User As New MyUser() With
-         {
-         .EmailAddress = EmailAddressTextBox.Text,
-         .Password = ForgotConfirmPasswordTextBox.Text
-         }
+        If (createReader.Read = True) Then
+            MessageBox.Show("Password Changed Successfully", "information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            HomePage.Show()
+            Me.Close()
+        Else
+            MessageBox.Show("Error", "information", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
 
-        Dim setter = client.Update("Users/" + EmailAddressTextBox.Text, User)
-        MessageBox.Show("New Password Created")
-
-        Me.Close()
+        createReader.Close()
+        createPasswordCon.Close()
 
     End Sub
 

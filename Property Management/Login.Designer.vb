@@ -33,11 +33,13 @@ Partial Class Login
         Me.EmailAddressTextBox = New System.Windows.Forms.TextBox()
         Me.PasswordTextBox = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.IconPictureBox1 = New FontAwesome.Sharp.IconPictureBox()
         Me.BackIconButton = New FontAwesome.Sharp.IconButton()
         CType(Me.FileSystemWatcher1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'FileSystemWatcher1
@@ -55,6 +57,7 @@ Partial Class Login
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.EmailAddressTextBox)
         Me.GroupBox1.Controls.Add(Me.PasswordTextBox)
+        Me.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.GroupBox1.Location = New System.Drawing.Point(489, 221)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(549, 430)
@@ -64,9 +67,10 @@ Partial Class Login
         'ShowPasswordCheckBox
         '
         Me.ShowPasswordCheckBox.AutoSize = True
-        Me.ShowPasswordCheckBox.Location = New System.Drawing.Point(248, 247)
+        Me.ShowPasswordCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ShowPasswordCheckBox.Location = New System.Drawing.Point(229, 243)
         Me.ShowPasswordCheckBox.Name = "ShowPasswordCheckBox"
-        Me.ShowPasswordCheckBox.Size = New System.Drawing.Size(162, 29)
+        Me.ShowPasswordCheckBox.Size = New System.Drawing.Size(157, 29)
         Me.ShowPasswordCheckBox.TabIndex = 8
         Me.ShowPasswordCheckBox.Text = "Show Password"
         Me.ShowPasswordCheckBox.UseVisualStyleBackColor = True
@@ -93,6 +97,7 @@ Partial Class Login
         '
         'LoginButton
         '
+        Me.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.LoginButton.Location = New System.Drawing.Point(55, 367)
         Me.LoginButton.Name = "LoginButton"
         Me.LoginButton.Size = New System.Drawing.Size(112, 34)
@@ -136,30 +141,41 @@ Partial Class Login
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Gainsboro
-        Me.Panel1.Controls.Add(Me.IconButton1)
+        Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Controls.Add(Me.IconPictureBox1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1600, 150)
         Me.Panel1.TabIndex = 1
         '
-        'IconButton1
+        'Label3
         '
-        Me.IconButton1.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.Home
-        Me.IconButton1.IconColor = System.Drawing.Color.Black
-        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton1.Location = New System.Drawing.Point(12, 36)
-        Me.IconButton1.Name = "IconButton1"
-        Me.IconButton1.Size = New System.Drawing.Size(303, 65)
-        Me.IconButton1.TabIndex = 0
-        Me.IconButton1.Text = "LOREM PROPERTY MANAGEMENT"
-        Me.IconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.IconButton1.UseVisualStyleBackColor = True
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Arial", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label3.Location = New System.Drawing.Point(205, 51)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(481, 32)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "LOREM PROPERTY MANAGEMENT"
+        '
+        'IconPictureBox1
+        '
+        Me.IconPictureBox1.BackColor = System.Drawing.Color.Gainsboro
+        Me.IconPictureBox1.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.IconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Home
+        Me.IconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText
+        Me.IconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconPictureBox1.IconSize = 66
+        Me.IconPictureBox1.Location = New System.Drawing.Point(129, 38)
+        Me.IconPictureBox1.Name = "IconPictureBox1"
+        Me.IconPictureBox1.Size = New System.Drawing.Size(70, 66)
+        Me.IconPictureBox1.TabIndex = 1
+        Me.IconPictureBox1.TabStop = False
         '
         'BackIconButton
         '
+        Me.BackIconButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BackIconButton.Font = New System.Drawing.Font("Arial", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.BackIconButton.IconChar = FontAwesome.Sharp.IconChar.ArrowCircleLeft
         Me.BackIconButton.IconColor = System.Drawing.Color.Black
@@ -187,6 +203,8 @@ Partial Class Login
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -202,6 +220,7 @@ Partial Class Login
     Friend WithEvents PasswordTextBox As TextBox
     Friend WithEvents ShowPasswordCheckBox As CheckBox
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
     Friend WithEvents BackIconButton As FontAwesome.Sharp.IconButton
+    Friend WithEvents IconPictureBox1 As FontAwesome.Sharp.IconPictureBox
+    Friend WithEvents Label3 As Label
 End Class

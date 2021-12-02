@@ -35,20 +35,23 @@ Partial Class CreateAccount
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.UserNameTextBox = New System.Windows.Forms.TextBox()
         Me.PasswordMatchLabel = New System.Windows.Forms.Label()
         Me.ShowPasswordCheckBox = New System.Windows.Forms.CheckBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.FemaleRadioButton = New System.Windows.Forms.RadioButton()
-        Me.MaleRadioButton = New System.Windows.Forms.RadioButton()
+        Me.GenderComboBox = New System.Windows.Forms.ComboBox()
         Me.SignUpButton = New System.Windows.Forms.Button()
         Me.CreatePasswordTextBox = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.IconPictureBox1 = New FontAwesome.Sharp.IconPictureBox()
         Me.BackIconButton = New FontAwesome.Sharp.IconButton()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'FirstNameTextBox
@@ -143,6 +146,8 @@ Partial Class CreateAccount
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Label7)
+        Me.GroupBox1.Controls.Add(Me.UserNameTextBox)
         Me.GroupBox1.Controls.Add(Me.PasswordMatchLabel)
         Me.GroupBox1.Controls.Add(Me.ShowPasswordCheckBox)
         Me.GroupBox1.Controls.Add(Me.GroupBox2)
@@ -159,11 +164,28 @@ Partial Class CreateAccount
         Me.GroupBox1.Controls.Add(Me.CreatePasswordTextBox)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.FirstNameTextBox)
+        Me.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.GroupBox1.Location = New System.Drawing.Point(305, 159)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(784, 517)
+        Me.GroupBox1.Size = New System.Drawing.Size(807, 564)
         Me.GroupBox1.TabIndex = 12
         Me.GroupBox1.TabStop = False
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(96, 497)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(91, 25)
+        Me.Label7.TabIndex = 18
+        Me.Label7.Text = "Username"
+        '
+        'UserNameTextBox
+        '
+        Me.UserNameTextBox.Location = New System.Drawing.Point(96, 441)
+        Me.UserNameTextBox.Name = "UserNameTextBox"
+        Me.UserNameTextBox.Size = New System.Drawing.Size(241, 31)
+        Me.UserNameTextBox.TabIndex = 17
         '
         'PasswordMatchLabel
         '
@@ -177,48 +199,38 @@ Partial Class CreateAccount
         'ShowPasswordCheckBox
         '
         Me.ShowPasswordCheckBox.AutoSize = True
+        Me.ShowPasswordCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ShowPasswordCheckBox.Location = New System.Drawing.Point(616, 196)
         Me.ShowPasswordCheckBox.Name = "ShowPasswordCheckBox"
-        Me.ShowPasswordCheckBox.Size = New System.Drawing.Size(162, 29)
+        Me.ShowPasswordCheckBox.Size = New System.Drawing.Size(157, 29)
         Me.ShowPasswordCheckBox.TabIndex = 15
         Me.ShowPasswordCheckBox.Text = "Show Password"
         Me.ShowPasswordCheckBox.UseVisualStyleBackColor = True
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.FemaleRadioButton)
-        Me.GroupBox2.Controls.Add(Me.MaleRadioButton)
-        Me.GroupBox2.Location = New System.Drawing.Point(437, 289)
+        Me.GroupBox2.Controls.Add(Me.GenderComboBox)
+        Me.GroupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.GroupBox2.Location = New System.Drawing.Point(437, 328)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(238, 119)
         Me.GroupBox2.TabIndex = 14
         Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Gender"
         '
-        'FemaleRadioButton
+        'GenderComboBox
         '
-        Me.FemaleRadioButton.AutoSize = True
-        Me.FemaleRadioButton.Location = New System.Drawing.Point(18, 77)
-        Me.FemaleRadioButton.Name = "FemaleRadioButton"
-        Me.FemaleRadioButton.Size = New System.Drawing.Size(93, 29)
-        Me.FemaleRadioButton.TabIndex = 1
-        Me.FemaleRadioButton.TabStop = True
-        Me.FemaleRadioButton.Text = "Female"
-        Me.FemaleRadioButton.UseVisualStyleBackColor = True
-        '
-        'MaleRadioButton
-        '
-        Me.MaleRadioButton.AutoSize = True
-        Me.MaleRadioButton.Location = New System.Drawing.Point(18, 30)
-        Me.MaleRadioButton.Name = "MaleRadioButton"
-        Me.MaleRadioButton.Size = New System.Drawing.Size(75, 29)
-        Me.MaleRadioButton.TabIndex = 0
-        Me.MaleRadioButton.TabStop = True
-        Me.MaleRadioButton.Text = "Male"
-        Me.MaleRadioButton.UseVisualStyleBackColor = True
+        Me.GenderComboBox.FormattingEnabled = True
+        Me.GenderComboBox.Items.AddRange(New Object() {"Male", "Female", "Other"})
+        Me.GenderComboBox.Location = New System.Drawing.Point(22, 45)
+        Me.GenderComboBox.Name = "GenderComboBox"
+        Me.GenderComboBox.Size = New System.Drawing.Size(182, 33)
+        Me.GenderComboBox.TabIndex = 0
         '
         'SignUpButton
         '
-        Me.SignUpButton.Location = New System.Drawing.Point(327, 446)
+        Me.SignUpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.SignUpButton.Location = New System.Drawing.Point(536, 488)
         Me.SignUpButton.Name = "SignUpButton"
         Me.SignUpButton.Size = New System.Drawing.Size(112, 34)
         Me.SignUpButton.TabIndex = 13
@@ -236,36 +248,47 @@ Partial Class CreateAccount
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Gainsboro
-        Me.Panel1.Controls.Add(Me.IconButton1)
+        Me.Panel1.Controls.Add(Me.Label8)
+        Me.Panel1.Controls.Add(Me.IconPictureBox1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1564, 150)
+        Me.Panel1.Size = New System.Drawing.Size(1620, 150)
         Me.Panel1.TabIndex = 13
         '
-        'IconButton1
+        'Label8
         '
-        Me.IconButton1.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.Home
-        Me.IconButton1.IconColor = System.Drawing.Color.Black
-        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton1.Location = New System.Drawing.Point(12, 36)
-        Me.IconButton1.Name = "IconButton1"
-        Me.IconButton1.Size = New System.Drawing.Size(303, 65)
-        Me.IconButton1.TabIndex = 0
-        Me.IconButton1.Text = "LOREM PROPERTY MANAGEMENT"
-        Me.IconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.IconButton1.UseVisualStyleBackColor = True
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Arial", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label8.Location = New System.Drawing.Point(208, 51)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(481, 32)
+        Me.Label8.TabIndex = 3
+        Me.Label8.Text = "LOREM PROPERTY MANAGEMENT"
+        '
+        'IconPictureBox1
+        '
+        Me.IconPictureBox1.BackColor = System.Drawing.Color.Gainsboro
+        Me.IconPictureBox1.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.IconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Home
+        Me.IconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText
+        Me.IconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconPictureBox1.IconSize = 66
+        Me.IconPictureBox1.Location = New System.Drawing.Point(132, 36)
+        Me.IconPictureBox1.Name = "IconPictureBox1"
+        Me.IconPictureBox1.Size = New System.Drawing.Size(70, 66)
+        Me.IconPictureBox1.TabIndex = 2
+        Me.IconPictureBox1.TabStop = False
         '
         'BackIconButton
         '
+        Me.BackIconButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BackIconButton.Font = New System.Drawing.Font("Arial", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.BackIconButton.IconChar = FontAwesome.Sharp.IconChar.ArrowCircleLeft
         Me.BackIconButton.IconColor = System.Drawing.Color.Black
         Me.BackIconButton.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.BackIconButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BackIconButton.Location = New System.Drawing.Point(62, 725)
+        Me.BackIconButton.Location = New System.Drawing.Point(132, 786)
         Me.BackIconButton.Name = "BackIconButton"
         Me.BackIconButton.Size = New System.Drawing.Size(132, 53)
         Me.BackIconButton.TabIndex = 17
@@ -277,7 +300,7 @@ Partial Class CreateAccount
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1564, 809)
+        Me.ClientSize = New System.Drawing.Size(1620, 866)
         Me.Controls.Add(Me.BackIconButton)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.GroupBox1)
@@ -286,8 +309,9 @@ Partial Class CreateAccount
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
         Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -306,13 +330,15 @@ Partial Class CreateAccount
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents SignUpButton As Button
-    Friend WithEvents FemaleRadioButton As RadioButton
-    Friend WithEvents MaleRadioButton As RadioButton
     Friend WithEvents CreatePasswordTextBox As TextBox
     Friend WithEvents ShowPasswordCheckBox As CheckBox
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
     Friend WithEvents PasswordMatchLabel As Label
     Friend WithEvents BackIconButton As FontAwesome.Sharp.IconButton
     Friend WithEvents ToolTip1 As ToolTip
+    Friend WithEvents GenderComboBox As ComboBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents UserNameTextBox As TextBox
+    Friend WithEvents IconPictureBox1 As FontAwesome.Sharp.IconPictureBox
+    Friend WithEvents Label8 As Label
 End Class
