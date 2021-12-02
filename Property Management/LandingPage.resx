@@ -57,4 +57,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>Lorem Property Management is a is a real estate services firm focused on delivering high quality and customized services to individuals, 
+the private sector and government clients in Kenya. The firm, duly incorporated under the companies Act Cap 486 in 1994, began 
+operations with a team of only four members of staff but has now grown to a fully- fledged staff of over two hundred 
+(200) and the initial five clients have multiplied ten</value>
+  </data>
 </root>

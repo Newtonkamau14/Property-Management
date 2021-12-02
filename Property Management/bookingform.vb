@@ -2,7 +2,7 @@
 
 
 
-Public Class bookingform
+Public Class BookingForm
     Dim displaycon As New MySqlConnection("server=localhost; user=root; password=; database=property_management;")
 
 
@@ -15,7 +15,7 @@ Public Class bookingform
 
     End Sub
 
-    Private Sub bookingform_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub BookingForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim selectedprop As String
         selectedprop = ChooseProperty.AvailableListBox.SelectedItem
         NameTextBox.Text = selectedprop

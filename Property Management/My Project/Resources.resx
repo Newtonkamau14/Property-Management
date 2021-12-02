@@ -118,7 +118,31 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lp1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lp1.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lp2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lp2.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lp5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lp5.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="houses-6757774" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\houses-6757774.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="house1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\house1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lp3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lp3.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lp4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lp4.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="berlin-307382" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\berlin-307382.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="skyline-2730410" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skyline-2730410.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

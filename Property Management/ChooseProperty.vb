@@ -10,15 +10,7 @@ Public Class ChooseProperty
         Me.WindowState = FormWindowState.Maximized
 
 
-
-
-
-
-
-
     End Sub
-
-
 
 
     Private Sub BuildingNameComboBox_SelectedIndexChanged(sender As Object, e As EventArgs)
@@ -30,17 +22,6 @@ Public Class ChooseProperty
         Me.Close()
     End Sub
 
-    Private Sub IconButton1_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub nextIconButton_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub IconButton2_Click(sender As Object, e As EventArgs)
-
-    End Sub
 
     Private Sub CheckButton_Click(sender As Object, e As EventArgs) Handles CheckButton.Click
         Dim area As String
@@ -238,36 +219,6 @@ Public Class ChooseProperty
         End If
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     End Sub
 
     Private Sub TypeOfApartmentGroupBox_Enter(sender As Object, e As EventArgs) Handles TypeOfApartmentGroupBox.Enter
@@ -275,9 +226,7 @@ Public Class ChooseProperty
     End Sub
 
     Private Sub ShowButton_Click(sender As Object, e As EventArgs) Handles ShowButton.Click
-        bookingform.Show()
-
-
+        BookingForm.Show()
 
 
     End Sub

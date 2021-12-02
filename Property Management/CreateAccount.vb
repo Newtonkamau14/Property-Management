@@ -1,25 +1,15 @@
-﻿Imports FireSharp.Config
-Imports FireSharp.Response
-Imports FireSharp.Interfaces
+﻿Imports MySql.Data.MySqlClient
 Imports System.Text.RegularExpressions
 Imports System.ComponentModel
 
-Public Class CreateAccount
-    Private fcon As New FirebaseConfig() With
-    {
-    .AuthSecret = "re22bCVTGFZl7VQRE7251agFMYdxr2rPJywGAm6d",
-    .BasePath = "https://property-management-b7c8c-default-rtdb.firebaseio.com/"
-    }
 
-    Public client As IFirebaseClient
+Public Class CreateAccount
+
 
 
     Private Sub CreateAccount_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Try
-            client = New FireSharp.FirebaseClient(fcon)
-        Catch ex As Exception
-            MessageBox.Show(ex.ToString())
-        End Try
+
+
         Me.WindowState = FormWindowState.Maximized
         ToolTip1.SetToolTip(CreatePasswordTextBox, "Password must have uppercase letter,8 characters long & special character")
     End Sub
@@ -35,45 +25,23 @@ Public Class CreateAccount
             Return
         End If
 #End Region
-        Dim reg As New HomePage
-        reg.ShowDialog()
-        Dim NewUser As New MyUser() With
-        {
-        .FirstName = FirstNameTextBox.Text,
-        .LastName = LastNameTextBox.Text,
-        .EmailAddress = EmailAddressTextBox.Text,
-        .PhoneNumber = PhoneNumberTextBox.Text,
-        .Password = ConfirmPasswordTextBox.Text
-        }
 
-        Dim setter = client.Set("Users/" + EmailAddressTextBox.Text, NewUser)
+
+        Dim createCon As New MySqlConnection("server=localhost; user=root; password=; database=property_management;")
+        Dim createCmd As New MySqlCommand("INSERT INTO `users`(`username`, `firstname`, `lastname`, `emailaddress`, `phonenumber`, `gender`, `password`) 
+            VALUES 
+                    ('" + UserNameTextBox.Text + "','" + FirstNameTextBox.Text + "','" + LastNameTextBox.Text + "',
+                     '" + EmailAddressTextBox.Text + "','" + PhoneNumberTextBox.Text + "','" + GenderComboBox.SelectedItem.ToString() + "',
+                     '" + ConfirmPasswordTextBox.Text + "'
+                    )", createCon)
+
+        createCon.Open()
+        createCmd.ExecuteNonQuery()
+
         MessageBox.Show("registered successfully")
-    End Sub
-
-    Private Sub ShowPasswordCheckBox_CheckedChanged(sender As Object, e As EventArgs) Handles ShowPasswordCheckBox.CheckedChanged
-        If ShowPasswordCheckBox.Checked = True Then
-            CreatePasswordTextBox.UseSystemPasswordChar = False
-            ConfirmPasswordTextBox.UseSystemPasswordChar = False
-        Else
-            CreatePasswordTextBox.UseSystemPasswordChar = True
-            ConfirmPasswordTextBox.UseSystemPasswordChar = True
-        End If
-    End Sub
-    Private Sub EmailAddressTextBox_Validating(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles EmailAddressTextBox.Validating
-        Dim email As String = EmailAddressTextBox.Text
-        If EmailAddressCheck(email) = False Then
-
-            Dim result As DialogResult _
-            = MessageBox.Show("The email address you entered is not valid." &
-                                       " Do you want re-enter it?", "Invalid Email Address",
-                                       MessageBoxButtons.YesNo, MessageBoxIcon.Error)
-            If result = Windows.Forms.DialogResult.Yes Then
-                e.Cancel = True
-            End If
-
-        End If
-
-
+        createCon.Close()
+        HomePage.Show()
+        Me.Close()
     End Sub
 
     Function EmailAddressCheck(ByVal emailAddress As String) As Boolean
@@ -89,19 +57,6 @@ Public Class CreateAccount
         End If
     End Function
 
-    Private Sub ConfirmPasswordTextBox_TextChanged(sender As Object, e As EventArgs) Handles ConfirmPasswordTextBox.TextChanged
-        If CreatePasswordTextBox.Text = ConfirmPasswordTextBox.Text Then
-            PasswordMatchLabel.Text = "Passwords Match"
-            PasswordMatchLabel.ForeColor = Color.Lime
-        Else
-            PasswordMatchLabel.Text = "Passwords Don't Match"
-            PasswordMatchLabel.ForeColor = Color.Red
-        End If
-    End Sub
-
-    Private Sub BackIconButton_Click(sender As Object, e As EventArgs) Handles BackIconButton.Click
-        Me.Close()
-    End Sub
 
 
     Function ValidatePassword(ByVal pwd As String,
@@ -129,8 +84,46 @@ Public Class CreateAccount
         ' Passed all checks.
         Return True
     End Function
+    Private Sub ShowPasswordCheckBox_CheckedChanged(sender As Object, e As EventArgs) Handles ShowPasswordCheckBox.CheckedChanged
+        If ShowPasswordCheckBox.Checked = True Then
+            CreatePasswordTextBox.UseSystemPasswordChar = False
+            ConfirmPasswordTextBox.UseSystemPasswordChar = False
+        Else
+            CreatePasswordTextBox.UseSystemPasswordChar = True
+            ConfirmPasswordTextBox.UseSystemPasswordChar = True
+        End If
+    End Sub
 
-    Private Sub ConfirmPasswordTextBox_Validating(sender As Object, e As CancelEventArgs) Handles ConfirmPasswordTextBox.Validating
+    Private Sub BackIconButton_Click(sender As Object, e As EventArgs) Handles BackIconButton.Click
+        Me.Close()
+    End Sub
+
+    Private Sub ConfirmPasswordTextBox_TextChanged(sender As Object, e As EventArgs) Handles ConfirmPasswordTextBox.TextChanged
+        If CreatePasswordTextBox.Text = ConfirmPasswordTextBox.Text Then
+            PasswordMatchLabel.Text = "Passwords Match"
+            PasswordMatchLabel.ForeColor = Color.Lime
+        Else
+            PasswordMatchLabel.Text = "Passwords Don't Match"
+            PasswordMatchLabel.ForeColor = Color.Red
+        End If
+    End Sub
+
+    Private Sub EmailAddressTextBox_Validating(sender As Object, e As CancelEventArgs) Handles EmailAddressTextBox.Validating
+        Dim email As String = EmailAddressTextBox.Text
+        If EmailAddressCheck(email) = False Then
+
+            Dim result As DialogResult _
+            = MessageBox.Show("The email address you entered is not valid." &
+                                       " Do you want re-enter it?", "Invalid Email Address",
+                                       MessageBoxButtons.YesNo, MessageBoxIcon.Error)
+            If result = Windows.Forms.DialogResult.Yes Then
+                e.Cancel = True
+            End If
+
+        End If
+    End Sub
+
+    Private Sub CreatePasswordTextBox_Validating(sender As Object, e As EventArgs) Handles CreatePasswordTextBox.Validating
         Dim strongPassword As String
         strongPassword = CreatePasswordTextBox.Text 'textbox containing password
         If ValidatePassword(strongPassword) = True Then
