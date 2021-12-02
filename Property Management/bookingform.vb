@@ -48,10 +48,5 @@ Public Class BookingForm
         PropertyPictureBox.BackgroundImageLayout = ImageLayout.Stretch
 
 
-
-
-
-
-
     End Sub
 End Class
