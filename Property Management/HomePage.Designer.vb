@@ -23,12 +23,15 @@ Partial Class HomePage
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.LogoutIconButton = New FontAwesome.Sharp.IconButton()
+        Me.UserNameLabel = New System.Windows.Forms.Label()
+        Me.IconPictureBox2 = New FontAwesome.Sharp.IconPictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.IconPictureBox1 = New FontAwesome.Sharp.IconPictureBox()
-        Me.UserIconButton = New FontAwesome.Sharp.IconButton()
         Me.ChoosePropertyIconButton = New FontAwesome.Sharp.IconButton()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
+        CType(Me.IconPictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -36,20 +39,66 @@ Partial Class HomePage
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Gainsboro
+        Me.Panel1.Controls.Add(Me.LogoutIconButton)
+        Me.Panel1.Controls.Add(Me.UserNameLabel)
+        Me.Panel1.Controls.Add(Me.IconPictureBox2)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.IconPictureBox1)
-        Me.Panel1.Controls.Add(Me.UserIconButton)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1129, 150)
         Me.Panel1.TabIndex = 1
         '
+        'LogoutIconButton
+        '
+        Me.LogoutIconButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.LogoutIconButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.LogoutIconButton.Font = New System.Drawing.Font("Arial", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.LogoutIconButton.IconChar = FontAwesome.Sharp.IconChar.LockOpen
+        Me.LogoutIconButton.IconColor = System.Drawing.Color.Black
+        Me.LogoutIconButton.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.LogoutIconButton.IconSize = 30
+        Me.LogoutIconButton.Location = New System.Drawing.Point(1044, 35)
+        Me.LogoutIconButton.Name = "LogoutIconButton"
+        Me.LogoutIconButton.Size = New System.Drawing.Size(73, 66)
+        Me.LogoutIconButton.TabIndex = 8
+        Me.LogoutIconButton.Text = "Logout"
+        Me.LogoutIconButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.LogoutIconButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.LogoutIconButton.UseVisualStyleBackColor = True
+        '
+        'UserNameLabel
+        '
+        Me.UserNameLabel.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.UserNameLabel.AutoSize = True
+        Me.UserNameLabel.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.UserNameLabel.Location = New System.Drawing.Point(997, 115)
+        Me.UserNameLabel.Name = "UserNameLabel"
+        Me.UserNameLabel.Size = New System.Drawing.Size(69, 23)
+        Me.UserNameLabel.TabIndex = 7
+        Me.UserNameLabel.Text = "Label2"
+        '
+        'IconPictureBox2
+        '
+        Me.IconPictureBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.IconPictureBox2.BackColor = System.Drawing.Color.Gainsboro
+        Me.IconPictureBox2.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.IconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.IdCard
+        Me.IconPictureBox2.IconColor = System.Drawing.SystemColors.ControlText
+        Me.IconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconPictureBox2.IconSize = 66
+        Me.IconPictureBox2.Location = New System.Drawing.Point(961, 35)
+        Me.IconPictureBox2.Name = "IconPictureBox2"
+        Me.IconPictureBox2.Size = New System.Drawing.Size(70, 66)
+        Me.IconPictureBox2.TabIndex = 6
+        Me.IconPictureBox2.TabStop = False
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Arial", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(231, 52)
+        Me.Label1.Location = New System.Drawing.Point(192, 50)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(481, 32)
         Me.Label1.TabIndex = 5
@@ -63,27 +112,11 @@ Partial Class HomePage
         Me.IconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText
         Me.IconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconPictureBox1.IconSize = 66
-        Me.IconPictureBox1.Location = New System.Drawing.Point(155, 35)
+        Me.IconPictureBox1.Location = New System.Drawing.Point(116, 35)
         Me.IconPictureBox1.Name = "IconPictureBox1"
         Me.IconPictureBox1.Size = New System.Drawing.Size(70, 66)
         Me.IconPictureBox1.TabIndex = 3
         Me.IconPictureBox1.TabStop = False
-        '
-        'UserIconButton
-        '
-        Me.UserIconButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.UserIconButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.UserIconButton.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.UserIconButton.IconChar = FontAwesome.Sharp.IconChar.IdCard
-        Me.UserIconButton.IconColor = System.Drawing.Color.Black
-        Me.UserIconButton.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.UserIconButton.Location = New System.Drawing.Point(944, 26)
-        Me.UserIconButton.Name = "UserIconButton"
-        Me.UserIconButton.Size = New System.Drawing.Size(113, 101)
-        Me.UserIconButton.TabIndex = 4
-        Me.UserIconButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.UserIconButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.UserIconButton.UseVisualStyleBackColor = True
         '
         'ChoosePropertyIconButton
         '
@@ -123,6 +156,7 @@ Partial Class HomePage
         Me.Text = "Home Page"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.IconPictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -130,8 +164,10 @@ Partial Class HomePage
     End Sub
     Friend WithEvents Panel1 As Panel
     Friend WithEvents ChoosePropertyIconButton As FontAwesome.Sharp.IconButton
-    Friend WithEvents UserIconButton As FontAwesome.Sharp.IconButton
     Friend WithEvents IconPictureBox1 As FontAwesome.Sharp.IconPictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents LogoutIconButton As FontAwesome.Sharp.IconButton
+    Friend WithEvents UserNameLabel As Label
+    Friend WithEvents IconPictureBox2 As FontAwesome.Sharp.IconPictureBox
 End Class

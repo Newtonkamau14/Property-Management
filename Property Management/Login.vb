@@ -6,6 +6,8 @@ Imports System.ComponentModel
 Public Class Login
     Dim loginCon As New MySqlConnection("server=localhost; user=root; password=; database=property_management;")
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        UserNameTextBox.SelectionStart = UserNameTextBox.Text.Length
+        UserNameTextBox.SelectionLength = 0
 
         Me.WindowState = FormWindowState.Maximized
     End Sub
@@ -17,14 +19,14 @@ Public Class Login
 
     Private Sub LoginButton_Click(sender As Object, e As EventArgs) Handles LoginButton.Click
 #Region "Condition"
-        If (String.IsNullOrWhiteSpace(EmailAddressTextBox.Text) AndAlso String.IsNullOrWhiteSpace(PasswordTextBox.Text)) Then
+        If (String.IsNullOrWhiteSpace(UserNameTextBox.Text) AndAlso String.IsNullOrWhiteSpace(PasswordTextBox.Text)) Then
             MessageBox.Show("Please fill all the fields.")
             Return
         End If
 #End Region
         Dim loginQuery As String
         Dim loginCmd As MySqlCommand
-        loginQuery = "SELECT emailaddress, password FROM `users` WHERE emailaddress='" + EmailAddressTextBox.Text + "' AND password='" + PasswordTextBox.Text + "'"
+        loginQuery = "SELECT username, password FROM `users` WHERE username='" + UserNameTextBox.Text + "' AND password='" + PasswordTextBox.Text + "'"
         loginCon.Open()
         Dim loginReader As MySqlDataReader
         loginCmd = New MySqlCommand(loginQuery, loginCon)
@@ -61,31 +63,4 @@ Public Class Login
         Me.Close()
     End Sub
 
-
-    Function EmailAddressCheck(ByVal emailAddress As String) As Boolean
-        Dim pattern As String = "^[a-zA-Z][\w\.-]*[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]" &
-        "*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$"
-        Dim emailAddressMatch As Match = Regex.Match(emailAddress, pattern)
-        If emailAddressMatch.Success Then
-            EmailAddressCheck = True
-
-        Else
-            EmailAddressCheck = False
-
-        End If
-    End Function
-    Private Sub EmailAddressTextBox_Validating(sender As Object, e As CancelEventArgs) Handles EmailAddressTextBox.Validating
-        Dim email As String = EmailAddressTextBox.Text
-        If EmailAddressCheck(email) = False Then
-
-            Dim result As DialogResult _
-            = MessageBox.Show("The email address you entered is not valid." &
-                                       " Do you want re-enter it?", "Invalid Email Address",
-                                       MessageBoxButtons.YesNo, MessageBoxIcon.Error)
-            If result = Windows.Forms.DialogResult.Yes Then
-                e.Cancel = True
-            End If
-
-        End If
-    End Sub
 End Class

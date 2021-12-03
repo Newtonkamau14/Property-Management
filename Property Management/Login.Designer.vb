@@ -30,16 +30,18 @@ Partial Class Login
         Me.LoginButton = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.EmailAddressTextBox = New System.Windows.Forms.TextBox()
+        Me.UserNameTextBox = New System.Windows.Forms.TextBox()
         Me.PasswordTextBox = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.IconPictureBox1 = New FontAwesome.Sharp.IconPictureBox()
         Me.BackIconButton = New FontAwesome.Sharp.IconButton()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.FileSystemWatcher1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'FileSystemWatcher1
@@ -55,7 +57,7 @@ Partial Class Login
         Me.GroupBox1.Controls.Add(Me.LoginButton)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.EmailAddressTextBox)
+        Me.GroupBox1.Controls.Add(Me.UserNameTextBox)
         Me.GroupBox1.Controls.Add(Me.PasswordTextBox)
         Me.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.GroupBox1.Location = New System.Drawing.Point(489, 221)
@@ -119,16 +121,16 @@ Partial Class Login
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(55, 137)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(124, 25)
+        Me.Label1.Size = New System.Drawing.Size(91, 25)
         Me.Label1.TabIndex = 3
-        Me.Label1.Text = "Email Address"
+        Me.Label1.Text = "Username"
         '
-        'EmailAddressTextBox
+        'UserNameTextBox
         '
-        Me.EmailAddressTextBox.Location = New System.Drawing.Point(55, 80)
-        Me.EmailAddressTextBox.Name = "EmailAddressTextBox"
-        Me.EmailAddressTextBox.Size = New System.Drawing.Size(282, 31)
-        Me.EmailAddressTextBox.TabIndex = 2
+        Me.UserNameTextBox.Location = New System.Drawing.Point(55, 80)
+        Me.UserNameTextBox.Name = "UserNameTextBox"
+        Me.UserNameTextBox.Size = New System.Drawing.Size(282, 31)
+        Me.UserNameTextBox.TabIndex = 2
         '
         'PasswordTextBox
         '
@@ -189,6 +191,17 @@ Partial Class Login
         Me.BackIconButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BackIconButton.UseVisualStyleBackColor = True
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PictureBox1.Image = Global.Property_Management.My.Resources.Resources.houses_6757774
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(1600, 757)
+        Me.PictureBox1.TabIndex = 18
+        Me.PictureBox1.TabStop = False
+        '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
@@ -197,6 +210,7 @@ Partial Class Login
         Me.Controls.Add(Me.BackIconButton)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Name = "Login"
         Me.Text = "Login"
         CType(Me.FileSystemWatcher1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -205,6 +219,7 @@ Partial Class Login
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -216,11 +231,12 @@ Partial Class Login
     Friend WithEvents LoginButton As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents EmailAddressTextBox As TextBox
+    Friend WithEvents UserNameTextBox As TextBox
     Friend WithEvents PasswordTextBox As TextBox
     Friend WithEvents ShowPasswordCheckBox As CheckBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents BackIconButton As FontAwesome.Sharp.IconButton
     Friend WithEvents IconPictureBox1 As FontAwesome.Sharp.IconPictureBox
     Friend WithEvents Label3 As Label
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
